@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0073df</color>
+    <color name="colorPrimaryDark">#0053a1</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="MouseBackground">#9ab7be</color>
+    <color name="MenuBackground">#eeebee</color>
+    <color name="AppBackground">#fafafa</color>
+    <color name="lighten">#54ffffff</color>
+    <color name="darken_less">#12000000</color>
+    <color name="darken">#32000000</color>
+    <color name="darken_2">#64000000</color>
+    <color name="keyboard_color">#eceff1</color>
+    <color name="keyboard_color_2">#e4e7e9</color>
+</resources>

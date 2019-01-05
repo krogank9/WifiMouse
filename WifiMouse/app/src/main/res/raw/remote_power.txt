@@ -1,0 +1,7 @@
+#! Power controls, ic_power
+
+Shutdown, ic_power, onclick=<Power Shutdown>, true, #b00, #fff
+Restart, ic_restart, <Power Restart>, true
+
+Log off, ic_logout, <Power Logout>, true
+Sleep, ic_sleep, <Power Sleep>, true

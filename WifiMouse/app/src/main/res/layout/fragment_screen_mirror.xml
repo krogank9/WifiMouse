@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.ScreenMirrorFragment"
+    android:id="@+id/base_frame"
+    android:background="@color/MenuBackground">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                        <TextView
+                            android:text="Pinch to zoom"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:text="Tap to click"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </LinearLayout>
+                <vivid.designs.wifimouse.PanZoomLayout
+                    android:id="@+id/pan_zoomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <vivid.designs.wifimouse.MyImageView
+                            android:layout_centerInParent="true"
+                            android:id="@+id/screen_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </vivid.designs.wifimouse.PanZoomLayout>
+        </FrameLayout>
+</RelativeLayout>

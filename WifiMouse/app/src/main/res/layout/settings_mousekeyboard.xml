@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MenuBackground"
+    android:padding="10sp">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse sensitivity"/>
+                <SeekBar
+                    android:id="@+id/mouse_sensitivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scroll sensitivity"/>
+                <SeekBar
+                    android:id="@+id/scroll_sensitivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:text="Disable rotation"
+                android:id="@+id/prevent_rotation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp" />
+
+            <CheckBox
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:text="Invert two finger scroll"
+                android:id="@+id/invert_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp" />
+
+            <CheckBox
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:text="Left and right buttons"
+                android:id="@+id/enable_lr_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp" />
+
+            <CheckBox
+                android:background="@drawable/settings_item_bg"
+                android:padding="10sp"
+                android:text="Hide scrollbar"
+                android:id="@+id/hide_scrollbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

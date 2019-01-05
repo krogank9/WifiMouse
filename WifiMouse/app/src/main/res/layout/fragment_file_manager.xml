@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.FileManagerFragment"
+    android:orientation="vertical"
+    android:id="@+id/base_frame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100sp">
+            <vivid.designs.wifimouse.IconTextButton
+                android:id="@+id/file_up_button"
+                icon="ic_up_dir"
+                text="Up"
+                textColor="#ffffff"
+                bgColor="#999999"
+                marginDp="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <vivid.designs.wifimouse.IconTextButton
+                android:id="@+id/file_home_button"
+                icon="ic_home"
+                text="Home"
+                textColor="#ffffff"
+                bgColor="#999999"
+                marginDp="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <vivid.designs.wifimouse.IconTextButton
+                icon="ic_restart"
+                text="Reload"
+                textColor="#ffffff"
+                bgColor="#999999"
+                sendMessageText="FileManager Refresh"
+                marginDp="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <vivid.designs.wifimouse.IconTextButton
+                android:id="@+id/file_send_button"
+                icon="ic_file_upload"
+                text="Send"
+                textColor="#ffffff"
+                bgColor="#999999"
+                marginDp="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+            <ListView
+                android:id="@+id/file_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/file_loading_overlay"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:background="@color/darken"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40sp"
+        android:elevation="10dp">
+        <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+            android:layout_centerVertical="true"
+            android:background="@color/AppBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            aspectRatio="2.5"
+            keepFixed="width">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/file_loading_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:padding="10sp"
+                        android:text="Loading"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20sp" />
+                    <ProgressBar
+                        android:id="@+id/file_progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+#! YouTube, ic_youtube
+
+icon=ic_volume_down, onclick=<KeyTap Down>, bg=#f33, fg=#fff
+icon=ic_volume_up, onclick=<KeyTap Up>
+
+icon=ic_fast_rewind, ondown=<KeyDown Left>, onup=<KeyUp Left>
+icon=ic_fast_forward, ondown=<KeyDown Right>, onup=<KeyUp Right>
+
+icon=ic_prev_song, onclick=<KeyTap P>
+icon=ic_next_song, onclick=<KeyTap N>
+
+icon=ic_fullscreen, onclick=<KeyTap f>
+icon=ic_pause, onclick=<KeyTap k>
+Esc, onclick=<KeyTap Esc>

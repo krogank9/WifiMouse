@@ -1,0 +1,238 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="vivid.designs.wifimouse.NavigationListFragment"
+    android:background="@color/MenuBackground">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+        <Spinner
+            android:id="@+id/navigation_server_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overlapAnchor="false"
+            android:backgroundTint="@android:color/white"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/navigation_remotes_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_remote"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Remotes" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/navigation_servers_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_desktop_windows"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Servers" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/navigation_tutorial_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Tutorial" />
+            </LinearLayout>
+
+
+            <View
+                android:background="#808080"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+
+            <LinearLayout
+                android:id="@+id/navigation_donate_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Donate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navigation_rate_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Rate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navigation_share_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/ic_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Share" />
+            </LinearLayout>
+
+
+            <View
+                android:background="#808080"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+
+            <LinearLayout
+                android:id="@+id/navigation_exit_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:layout_marginRight="3dp"
+                    keepFixed="height">
+                    <ImageView
+                        android:src="@drawable/grey_x"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Exit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

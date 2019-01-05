@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.RemoteListActivity"
+    android:id="@+id/drawer_layout">
+
+    <!-- The navigation drawer -->
+    <fragment
+        android:id="@+id/left_drawer"
+        android:name="vivid.designs.wifimouse.NavigationListFragment"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/MenuBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Action Bar -->
+        <LinearLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/navigation_button"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                <RelativeLayout
+                    android:layout_width="35sp"
+                    android:layout_height="match_parent">
+                    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:textSize="21dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="Remotes"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <!-- Network status box -->
+        <FrameLayout
+            android:id="@+id/network_status_container"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:clipChildren="true">
+            <fragment
+                android:id="@+id/network_status_fragment"
+                android:name="vivid.designs.wifimouse.NetworkStatusFragment"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"/>
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/remote_list_view"
+            android:scrollbars="none"
+            android:drawSelectorOnTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10sp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="10sp"
+            android:background="@color/MenuBackground"/>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

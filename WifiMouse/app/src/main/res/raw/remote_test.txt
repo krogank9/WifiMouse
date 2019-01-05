@@ -1,0 +1,12 @@
+#! Tester, ic_remote
+
+<TestFunc>, onclick=<KeyCombo Ctrl l>, bg=#00b, fg=#fff
+
+linux:functions:
+TestFunc, <RunCommand echo this is linucks>
+
+mac:functions:
+TestFunc, <RunCommand echo this is aplel>
+
+windows:functions:
+TestFunc, windoze

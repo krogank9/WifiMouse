@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/button_background"
+    android:clipChildren="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <vivid.designs.wifimouse.PercentSizedRelativeLayout
+                android:id="@+id/button_icon_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                percentSize="0.85">
+                <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:padding="8dp">
+                    <ImageView
+                        android:id="@+id/button_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+            </vivid.designs.wifimouse.PercentSizedRelativeLayout>
+            <TextView
+                android:id="@+id/button_text"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/button_pressed_highlight"
+        android:visibility="invisible"
+        android:background="@color/lighten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

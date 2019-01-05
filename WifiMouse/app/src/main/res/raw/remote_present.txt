@@ -1,0 +1,14 @@
+#! Presentation, ic_powerpoint
+
+Goto, onclick=<TypeString <NumPrompt Enter slide number>> <KeyTap Return>, bg=#ffe954, fg=#000
+
+↢ Start, onclick=<KeyTap F5>
+Fullscreen, onclick=<KeyTap F11>
+End ↣, onclick=<KeyTap Esc>
+
+← Prev, onclick=<KeyTap Left>
+Next →, onclick=<KeyTap Right>
+
+functions:
+VolumeButtonDown, <KeyTap Left>
+VolumeButtonUp, <KeyTap Right>

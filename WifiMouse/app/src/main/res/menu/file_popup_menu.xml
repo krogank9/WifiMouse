@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Open"/>
+    <item android:title="Details"/>
+    <item android:title="Copy"/>
+    <item android:title="Cut"/>
+    <item android:title="Paste"/>
+    <item android:title="Delete"/>
+</menu>

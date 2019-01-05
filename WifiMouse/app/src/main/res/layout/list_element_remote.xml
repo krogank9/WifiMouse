@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75sp"
+    android:elevation="3dp"
+    android:background="@color/AppBackground">
+
+    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+        android:padding="16sp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:tint="@color/colorPrimaryDark"
+            android:id="@+id/remote_element_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_mouse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:id="@+id/remote_element_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        android:padding="15sp"/>
+
+</LinearLayout>

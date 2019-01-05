@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.ServerListFragment"
+    android:id="@+id/base_frame"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Saved servers list -->
+            <TextView
+                android:text="SAVED SERVERS:"
+                android:textStyle="bold"
+                android:padding="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="?android:attr/listDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:id="@+id/saved_server_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/none_saved_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:padding="15sp"
+                        android:text="Tap a server below to add it and connect."/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Found servers list -->
+            <TextView
+                android:text="FOUND SERVERS:"
+                android:textStyle="bold"
+                android:padding="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="?android:attr/listDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:id="@+id/found_server_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/searching_servers_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp">
+                    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                        android:padding="8sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/found_servers_searching"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_searching"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:padding="15sp"
+                        android:text="Searching for servers..."/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/server_no_wifi_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp">
+                    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+                        android:padding="8sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_x"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:padding="15sp"
+                        android:text="WiFi unavailable"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Manually add a server:"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:clickable="true"
+            android:src="@drawable/ic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

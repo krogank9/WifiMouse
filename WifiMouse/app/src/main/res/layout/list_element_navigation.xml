@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="50dp">
+
+    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+        android:padding="8sp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/circle_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/circle"/>
+        <ImageView
+            android:id="@+id/server_element_icon"
+            android:scaleType="fitXY"
+            android:padding="4dp"
+            android:src="@drawable/ic_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+
+    <TextView
+        android:id="@+id/server_element_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="15sp"/>
+
+</LinearLayout>

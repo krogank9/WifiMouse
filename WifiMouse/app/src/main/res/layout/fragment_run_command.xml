@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.RunCommandFragment"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="@color/MenuBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:padding="10sp">
+        <AutoCompleteTextView
+            android:id="@+id/run_command_entry"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:hint="Enter command"/>
+        <Button
+            android:id="@+id/run_command_send"
+            android:text="Send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000"
+        android:fillViewport="true">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/run_command_output"
+                android:padding="10sp"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:fontFamily="monospace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Output:" />
+        </HorizontalScrollView>
+    </ScrollView>
+
+</LinearLayout>

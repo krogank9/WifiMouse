@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="prompt_padding_top">20sp</dimen>
+    <dimen name="prompt_padding_side">12sp</dimen>
+</resources>

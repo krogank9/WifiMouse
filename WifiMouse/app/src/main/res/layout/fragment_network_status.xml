@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    tools:context="vivid.designs.wifimouse.NetworkStatusFragment"
+    android:id="@+id/network_status_frame">
+
+    <vivid.designs.wifimouse.FixedAspectRatioRelativeLayout
+        android:id="@+id/network_status_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_lines_red"
+        keepFixed="width">
+    </vivid.designs.wifimouse.FixedAspectRatioRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#64ffffff"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/network_status_text"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:text="Can't connect to server. Please enter password." />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/network_status_action_button"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="Set password"/>
+    </LinearLayout>
+
+</FrameLayout>

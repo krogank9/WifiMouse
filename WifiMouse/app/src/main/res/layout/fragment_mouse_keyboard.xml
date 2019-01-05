@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vivid.designs.wifimouse.MouseKeyboardFragment"
+    android:orientation="horizontal"
+    android:id="@+id/touchpad"
+    android:background="#bbfafafa">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/touchpad_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to left-click.\n\nDouble tap scrollbar to right-click.\n\nTap with two fingers to middle-click.\n\nUse two fingers to scroll, or one in scrollbar."/>
+        </RelativeLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/mouse_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="35pt"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/left_mouse_button"
+                android:background="@color/darken_less"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:orientation="horizontal"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/right_mouse_button"
+                android:background="@color/darken_less"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/scroll_area"
+        android:layout_alignParentRight="true"
+        android:background="@color/darken_less"
+        android:layout_width="35sp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+</LinearLayout>

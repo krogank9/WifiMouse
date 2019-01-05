@@ -1,0 +1,7 @@
+#! Monitor, ic_settings_brightness
+
+Blank screen, ic_logout, <Power Blank>, true, #00b, #fff
+Lock screen, ic_lock, <Power Lock>, true
+
+Brightness -, ic_brightness_low, <KeyTap BrightnessDown>
+Brightness +, ic_brightness_high, <KeyTap BrightnessUp>
